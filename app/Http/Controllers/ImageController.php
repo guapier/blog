@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\File;
 use App\Http\Repositories\ImageRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class ImageController extends Controller
 {
@@ -46,5 +48,19 @@ class ImageController extends Controller
                 return back()->with('success', '上传成功');
             return back()->withErrors('上传失败');
         }
+    }
+
+    public function post_upload(Request $request)
+    {
+
+        $type = $request->input('type', null);
+        if ($type != null && $type == 'xrt') {
+            return $this->imageRepository->uploadImageToQiNiu($request, false);
+        } else {
+            if ($this->imageRepository->uploadImageToQiNiu($request, true))
+                return back()->with('success', '上传成功');
+            return back()->withErrors('上传失败');
+        }
+
     }
 }

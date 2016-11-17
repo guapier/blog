@@ -62,6 +62,7 @@ Route::group(['prefix' => 'admin', ['middleware' => ['auth', 'admin']]], functio
     Route::post('/upload/image', ['uses' => 'ImageController@uploadImage', 'as' => 'upload.image']);
     Route::delete('/delete/file', ['uses' => 'FileController@deleteFile', 'as' => 'delete.file']);
     Route::post('/upload/file', ['uses' => 'FileController@uploadFile', 'as' => 'upload.file']);
+    Route::post('/upload/all', ['uses' => 'ImageController@post_upload', 'as' => 'upload.all']);
 
 
     /**

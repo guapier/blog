@@ -28,6 +28,17 @@
                     </div>
                 </form>
             </div>
+
+
+
+            <form action="{{ route('upload.all')}}" class="dropzone" id="my-dropzone">
+                {{ csrf_field() }}
+            </form>
+            
+
+
+
+
         </div>
     </div>
     <div class="row">
@@ -86,4 +97,21 @@
             trigger: 'click',
         });
     </script>
+
+    <script>
+        $(function () {
+            Dropzone.options.mydropzone = {
+                paramName: "file", // The name that will be used to transfer the file
+                maxFilesize: 2, // MB
+                accept: function(file, done) {
+                    if (file.name) {
+                        alert(file);
+                    }
+                    else { alert('something wrong!'); }
+                }
+            };
+        })
+
+    </script>
+
 @endsection

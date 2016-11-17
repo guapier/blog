@@ -8,6 +8,8 @@
     <meta name="theme-color" content="#52768e">
     <title>@yield('title') Admin {{ $site_title or '' }}</title>
     <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/basic.css" rel="stylesheet">
+    <link href="/css/dropzone.css" rel="stylesheet">
     @if(isset($site_css) && $site_css)
         <link href="{{ $site_css }}" rel="stylesheet">
     @else
@@ -37,5 +39,6 @@
     <script src="{{ elixir('js/app.js') }}"></script>
 @endif
 @yield('script')
+<script type="text/javascript" src="/js/dropzone.js"></script>
 </body>
 </html>

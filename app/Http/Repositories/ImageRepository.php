@@ -36,7 +36,8 @@ class ImageRepository extends FileRepository
 
     public function uploadImageToQiNiu(Request $request, $html)
     {
-        $file = $request->file('image');
+        //$file = $request->file('image');
+       $file = $request->file('file');
         $data = [];
         $url = $this->uploadFile($file);
         if ($url) {
@@ -50,6 +51,8 @@ class ImageRepository extends FileRepository
                 return false;
             $data['error'] = 'upload failed';
         }
+
+        dd($html);
         return $data;
     }
 
