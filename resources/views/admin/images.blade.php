@@ -34,7 +34,7 @@
             <form action="{{ route('upload.all')}}" class="dropzone" id="my-dropzone">
                 {{ csrf_field() }}
             </form>
-            
+
 
 
 
