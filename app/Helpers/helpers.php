@@ -8,6 +8,13 @@ use App\User;
  * Time: 1:43
  */
 
+if (!function_exists('test')) {
+    function isAdmin($user)
+    {
+        return $user != null && $user instanceof User && $user->id == 1;
+    }
+}
+
 if (!function_exists('isAdmin')) {
     function isAdmin($user)
     {
