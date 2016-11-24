@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>超炫酷的jQuery轮播焦点图DEMO演示</title>
+    <title>画廊</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/pgwslideshow.css">
@@ -16,7 +16,24 @@
 <div class="htmleaf-container">
     <div class="htmleaf-content bgcolor-3">
         <ul class="pgwSlideshow">
-            {{--<li><img src="img/san-francisco.jpg" alt="San Francisco, USA" data-description="Golden Gate Bridge"></li>
+       {{--     <li><img src="img/san-francisco.jpg" alt="San Francisco, USA" data-description="Golden Gate Bridge"></li>
+            <li><img src="img/rio.jpg" alt="Rio de Janeiro, Brazil"></li>
+            <li><img src="img/london.jpg" alt="" data-large-src="img/london.jpg"></li>
+            <li><img src="img/new-york.jpg" alt=""></li>
+            <li><img src="img/new-delhi.jpg" alt=""></li>
+            <li><img src="img/paris.jpg" alt=""></li>
+            <li><img src="img/sydney.jpg" alt=""></li>
+            <li><img src="img/tokyo.jpg" alt=""></li>
+            <li><img src="img/honk-kong.jpg" alt=""></li>
+            <li><img src="img/dakar.jpg" alt=""></li>
+            <li><img src="img/toronto.jpg" alt=""></li>
+            <li>
+                <a href="http://en.wikipedia.org/wiki/Monaco" target="_blank">
+                    <img src="img/monaco.jpg" alt="Monaco">
+                </a>
+            </li>
+
+            <li><img src="img/san-francisco.jpg" alt="San Francisco, USA" data-description="Golden Gate Bridge"></li>
             <li><img src="img/rio.jpg" alt="Rio de Janeiro, Brazil"></li>
             <li><img src="img/london.jpg" alt="" data-large-src="img/london.jpg"></li>
             <li><img src="img/new-york.jpg" alt=""></li>
@@ -32,15 +49,13 @@
                     <img src="img/monaco.jpg" alt="Monaco">
                 </a>
             </li>--}}
+            
             @foreach($images as $image)
-                <li><img src="{{ getImageViewUrl($image->key,null,null,1) }}"></li>
+                <li><img src="{{ getImageViewUrl($image->key,980,600,1) }}" alt=""></li>
             @endforeach
 
+
         </ul>
-        <div style="text-align:center;clear:both">
-            <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
-            <script src="/follow.js" type="text/javascript"></script>
-        </div>
     </div>
 
 </div>

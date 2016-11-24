@@ -21,7 +21,7 @@ class ImageRepository extends FileRepository
 {
     static $tag = 'image';
 
-    public function getAll($page = 12)
+    public function getAll($page = 1000)
     {
         $maps = $this->remember('image.page.' . $page . request()->get('page', 1), function () use ($page) {
             return File::where('type', 'image')->orderBy('created_at', 'desc')->paginate($page);
