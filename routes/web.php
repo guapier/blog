@@ -22,6 +22,8 @@ Route::get('/', ['uses' => 'HomeController@index', 'as' => 'index']);
 Route::get('/projects', ['uses' => 'HomeController@projects', 'as' => 'projects']);
 Route::get('/search', ['uses' => 'HomeController@search', 'as' => 'search']);
 Route::get('/achieve', ['uses' => 'HomeController@achieve', 'as' => 'achieve']);
+Route::get('/gallery', ['uses' => 'HomeController@gallery', 'as' => 'gallery']);
+Route::get('/api/gallery', ['uses' => 'HomeController@getData', 'as' => 'api.gallery']);
 
 // Post
 Route::get('/blog', ['uses' => 'PostController@index', 'as' => 'post.index']);

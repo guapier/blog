@@ -45,8 +45,11 @@
         @forelse($images as $image)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="widget widget-default">
-                    <div class="js-imgLiquid" style="width: 100% ;height: 250px;">
+                    {{--<div class="js-imgLiquid" style="width: 100% ;height: 250px;">
                         <img src="{{ getImageViewUrl($image->key,null,250) }}">
+                    </div>--}}
+                    <div class="js-imgLiquid" style="width: 100% ;height: 250px;">
+                        <img src="{{ getImageViewUrl($image->key,null,250,1) }}">
                     </div>
                     <div class="widget-footer">
                         <div class="widget-meta">
@@ -102,7 +105,7 @@
         $(function () {
             Dropzone.options.mydropzone = {
                 paramName: "file", // The name that will be used to transfer the file
-                maxFilesize: 2, // MB
+                maxFilesize: 8, // MB
                 accept: function(file, done) {
                     if (file.name) {
                         alert(file);
