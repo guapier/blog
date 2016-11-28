@@ -15,6 +15,7 @@
             <font aria-hidden="true">»</font>
             <a href="{{ route('post.index') }}" aria-label="点击查看博客文章列表">博客
                 <a href="{{ route('gallery') }}" aria-label="点击查看图库列表">/老照片
+                    <a href="{{ route('music') }}" aria-label="点击查看图库列表">/音乐
             @if(isset($github_username) && $github_username)
                 <font aria-hidden="true">/</font><a href="{{ route('projects') }}" aria-label="点击查看项目列表">项目</a>
             @endif

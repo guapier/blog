@@ -63,4 +63,9 @@ class HomeController extends Controller
 
     }
 
+    public function music(){
+        return view('music');
+
+    }
+
 }

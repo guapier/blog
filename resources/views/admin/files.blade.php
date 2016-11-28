@@ -11,10 +11,10 @@
                     <form role="form" class="form-horizontal" action="{{ route('upload.file') }}"
                           enctype="multipart/form-data" method="post">
                         {{ csrf_field() }}
-                        <input type="hidden" name="type" value="js">
+                        <input type="hidden" name="type" value="mp3">
                         <div class="form-group">
                             <label class="col-xs-2 col-xs-offset-1 control-label">
-                                Js
+                                Mp3
                             </label>
                             <div class="col-xs-6">
                                 <input class="form-control" type="file" name="file">

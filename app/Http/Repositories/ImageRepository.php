@@ -23,6 +23,7 @@ class ImageRepository extends FileRepository
 
     public function getAll($page = 1000)
     {
+        //$arr = explode('@',$email); $domain = $arr[1];
         $maps = $this->remember('image.page.' . $page . request()->get('page', 1), function () use ($page) {
             return File::where('type', 'image')->orderBy('created_at', 'desc')->paginate($page);
         });
@@ -52,7 +53,6 @@ class ImageRepository extends FileRepository
             $data['error'] = 'upload failed';
         }
 
-        dd($html);
         return $data;
     }
 

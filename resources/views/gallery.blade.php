@@ -49,7 +49,7 @@
                     <img src="img/monaco.jpg" alt="Monaco">
                 </a>
             </li>--}}
-            
+
             @foreach($images as $image)
                 <li><img src="{{ getImageViewUrl($image->key,980,600,1) }}" alt=""></li>
             @endforeach

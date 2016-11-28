@@ -105,7 +105,7 @@
         $(function () {
             Dropzone.options.mydropzone = {
                 paramName: "file", // The name that will be used to transfer the file
-                maxFilesize: 8, // MB
+                maxFilesize: 20, // MB
                 accept: function(file, done) {
                     if (file.name) {
                         alert(file);
