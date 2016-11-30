@@ -68,4 +68,8 @@ class HomeController extends Controller
 
     }
 
+    public function guestbook(){
+        return view('guestbook');
+    }
+
 }

@@ -25,6 +25,7 @@ Route::get('/achieve', ['uses' => 'HomeController@achieve', 'as' => 'achieve']);
 Route::get('/gallery', ['uses' => 'HomeController@gallery', 'as' => 'gallery']);
 Route::get('/api/gallery', ['uses' => 'HomeController@getData', 'as' => 'api.gallery']);
 Route::get('/music', ['uses' => 'HomeController@music', 'as' => 'music']);
+Route::get('/guestbook', ['uses' => 'HomeController@guestbook', 'as' => 'guestbook']);
 
 // Post
 Route::get('/blog', ['uses' => 'PostController@index', 'as' => 'post.index']);
