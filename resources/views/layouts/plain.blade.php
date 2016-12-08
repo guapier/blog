@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ $author or '' }}">
+    <meta name="baidu-site-verification" content="vPSmDVRn0C" />
     <title>@yield('title') {{ $site_title or '' }} </title>
     <meta name="keywords" content="{{ $site_keywords or '' }}">
     <meta name="description" content="@yield('description') {{ $site_description or '' }}">
