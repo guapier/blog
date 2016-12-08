@@ -19,6 +19,7 @@
     @include('widget.google_analytics')
 </head>
 <body>
+
 <div class="container">
     <div class="content">
         @yield('content')

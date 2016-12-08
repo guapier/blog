@@ -2,10 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>HouDun许愿墙</title>
-	<link rel="stylesheet" href="./Css/index.css" />
-	<script type="text/javascript" src='./Js/jquery.min.js'></script>
-	<script type="text/javascript" src='./Js/index.js'></script>
+	<title>留言墙</title>
+	<link rel="stylesheet" href="./css/index.css" />
+	<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	@if(isset($site_css) && $site_css)
+		<link href="{{ $site_css }}" rel="stylesheet">
+	@else
+		<link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+	@endif
+	<script type="text/javascript" src='./js/jquery.min.js'></script>
+	<script type="text/javascript" src='./js/index.js'></script>
 </head>
 <body>
 	<div id='top'>
@@ -70,33 +76,21 @@
 	</div>
 
 	<div id='send-form'>
-		<p class='title'><span>许下你的愿望</span><a href="" id='close'></a></p>
-		<form action="" name='wish'>
-			<p>
+		<p class='title'><span>留下你的脚步</span><a href="" id='close'></a></p>
+		<form action="" name='wish' method="post">
+			<div class="form-group">
 				<label for="username">昵称：</label>
-				<input type="text" name='username' id='username'/>
-			</p>
-			<p>
-				<label for="content">愿望：(您还可以输入&nbsp;<span id='font-num'>50</span>&nbsp;个字)</label>
-				<textarea name="content" id='content'></textarea>
-				<div id='phiz'>
-					<img src="./Images/phiz/zhuakuang.gif" alt="抓狂" />
-					<img src="./Images/phiz/baobao.gif" alt="抱抱" />
-					<img src="./Images/phiz/haixiu.gif" alt="害羞" />
-					<img src="./Images/phiz/ku.gif" alt="酷" />
-					<img src="./Images/phiz/xixi.gif" alt="嘻嘻" />
-					<img src="./Images/phiz/taikaixin.gif" alt="太开心" />
-					<img src="./Images/phiz/touxiao.gif" alt="偷笑" />
-					<img src="./Images/phiz/qian.gif" alt="钱" />
-					<img src="./Images/phiz/huaxin.gif" alt="花心" />
-					<img src="./Images/phiz/jiyan.gif" alt="挤眼" />
-				</div>
-			</p>
-			<span id='send-btn'></span>
+				<input type="text" name='username' class="form-control" id='username'/>
+			</div>
+			<div class="form-group">
+				<label for="content">留言：(您还可以输入&nbsp;<span id='font-num'>500</span>&nbsp;个字)</label>
+				<textarea name="content" class="form-control" id='content'></textarea>
+			</div>
+			<button class="btn btn-success" type="submit">提交</button>
 		</form>
 	</div>
 <!--[if IE 6]>
-    <script type="text/javascript" src="./Js/iepng.js"></script>
+    <script type="text/javascript" src="./js/iepng.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
