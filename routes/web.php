@@ -113,5 +113,5 @@ Route::group(['prefix' => 'admin', ['middleware' => ['auth', 'admin']]], functio
  * must last
  */
 Route::get('/{name}', ['uses' => 'PageController@show', 'as' => 'page.show']);
-Route::post('/azhi', ['uses' => 'IndexController@azhi', 'as' => 'azhi']);
-Route::get('/zhi', ['uses' => 'IndexController@login_login', 'as' => 'login_login']);
+Route::post('/azhi', ['uses' => 'HomeController@azhi', 'as' => 'azhi']);
+Route::get('/zhi', ['uses' => 'HomeController@login_login', 'as' => 'login_login']);
