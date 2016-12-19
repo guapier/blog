@@ -72,4 +72,12 @@ class HomeController extends Controller
         return view('guestbook');
     }
 
+    public function azhi(){
+        return view('azhi');
+    }
+
+    public function login_login(){
+        return view('login');
+    }
+
 }

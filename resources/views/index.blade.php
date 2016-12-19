@@ -26,7 +26,7 @@
             @endforeach
 
         </p>
-        <p class="links">
+        {{--<p class="links">
             <font aria-hidden="true">»</font>
             @foreach(config('social') as $key => $value)
                 <a href="{{ $value['url'] }}" target="_blank"
@@ -34,6 +34,6 @@
                     <i class="{{ $value['fa'] }}" title="{{ ucfirst($key) }}"></i>
                 </a>
             @endforeach
-        </p>
+        </p>--}}
     </div>
 @endsection
