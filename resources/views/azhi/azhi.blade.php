@@ -15,11 +15,11 @@
 </head>
 
 <body>
-<div style="text-align: center">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=28285910&auto=0&height=32"></iframe>
+<div>
+    <embed src="//music.163.com/style/swf/widget.swf?sid=28285910&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
 </div>
 <div id="mainDiv">
-    <div style="te"></div>
+
     <div id="content" style="text-align: center;width: 100%" >
         {{--
 
