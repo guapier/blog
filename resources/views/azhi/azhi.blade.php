@@ -16,7 +16,7 @@
 
 <body>
 <div id="mainDiv">
-    <div id="content">
+    <div id="content" style="text-align: center;width: 100%" >
         {{--
 
         又到了你的生日了，时间过的真快，大二暑假相识，如今转眼已快两年半了，
@@ -45,7 +45,7 @@
             <span class="space">感觉时间过得真快</span><br />
             <span class="space">大二暑假相识</span><br />
             <span class="space"/>如今转眼已两年半了<br />
-    {{--        <span class="space"/>一路有你这小逗比的陪伴<br />
+            <span class="space"/>一路有你这小逗比的陪伴<br />
             <span class="space"/>感觉真好<br />
             <span class="space"/>大学认识了你<br />
             <span class="space"/>感觉有点小幸运<br />
@@ -77,7 +77,7 @@
                 <span class="space">😂😂😂😂😂😂</span><br />
                 <span class="space">😂😂😂😂😂😂</span><br />
                 <span class="space">😂😂😂😂😂😂</span><br />
-				<span class="space"/>祝逗比小学妹生日快乐！！！<br />------与君初相识，犹如故人归。</span> <br />--}}
+				<span class="space"/>祝逗比小学妹生日快乐！！！<br />------与君初相识，犹如故人归。</span> <br />
             <br />
         </div>
         <div id="loveHeart">
