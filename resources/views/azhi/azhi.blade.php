@@ -82,7 +82,7 @@
         </div>
         <div id="loveHeart">
             <canvas id="garden"></canvas>
-            <div id="words">
+            <div id="words" style=" width:500px;position: absolute; top: 2500px; float: right;font-size: 30px;">
                 <div id="messages">
                     to 逗比阿芝小学妹
                     <div id="elapseClock"></div>
