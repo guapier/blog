@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Our Love Story</title>
+    <title>A gift to Azhi</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style type="text/css">
         @font-face {
@@ -11,7 +10,7 @@
     </style>
     <link href="/css/default_dev.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/garden_dev.js"></script>
+    {{--<script type="text/javascript" src="/js/garden_dev.js"></script>--}}
     <script type="text/javascript" src="/js/functions_dev.js"></script>
 </head>
 

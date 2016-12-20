@@ -1,202 +1,96 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html
-        xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta content="IE=11.0000"
-          http-equiv="X-UA-Compatible">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <TITLE>登录页面</TITLE>
-    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Azhi</title>
 
-    <style>
-        body {
-            background: #ebebeb;
-            font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif;
-            color: #222;
-            font-size: 12px;
-        }
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        * {
-            padding: 0px;
-            margin: 0px;
-        }
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-        .top_div {
-            background: #008ead;
-            width: 100%;
-            height: 400px;
-        }
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
-        .ipt {
-            border: 1px solid #d3d3d3;
-            padding: 10px 10px;
-            width: 290px;
-            border-radius: 4px;
-            padding-left: 35px;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
-        }
-
-        .ipt:focus {
-            border-color: #66afe9;
-            outline: 0;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
-        }
-
-        .u_logo {
-            background: url("/images/username.png") no-repeat;
-            padding: 10px 10px;
-            position: absolute;
-            top: 43px;
-            left: 40px;
-
-        }
-
-        .p_logo {
-            background: url("/images/password.png") no-repeat;
-            padding: 10px 10px;
-            position: absolute;
-            top: 12px;
-            left: 40px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .tou {
-            background: url("/images/tou.png") no-repeat;
-            width: 97px;
-            height: 92px;
-            position: absolute;
-            top: -87px;
-            left: 140px;
-        }
-
-        .left_hand {
-            background: url("/images/left_hand.png") no-repeat;
-            width: 32px;
-            height: 37px;
-            position: absolute;
-            top: -38px;
-            left: 150px;
-        }
-
-        .right_hand {
-            background: url("/images/right_hand.png") no-repeat;
-            width: 32px;
-            height: 37px;
-            position: absolute;
-            top: -38px;
-            right: -64px;
-        }
-
-        .initial_left_hand {
-            background: url("/images/hand.png") no-repeat;
-            width: 30px;
-            height: 20px;
-            position: absolute;
-            top: -12px;
-            left: 100px;
-        }
-
-        .initial_right_hand {
-            background: url("images/hand.png") no-repeat;
-            width: 30px;
-            height: 20px;
-            position: absolute;
-            top: -12px;
-            right: -112px;
-        }
-
-        .left_handing {
-            background: url("/images/left-handing.png") no-repeat;
-            width: 30px;
-            height: 20px;
-            position: absolute;
-            top: -24px;
-            left: 139px;
-        }
-
-        .right_handinging {
-            background: url("/images/right_handing.png") no-repeat;
-            width: 30px;
-            height: 20px;
-            position: absolute;
-            top: -21px;
-            left: 210px;
-        }
-
-    </style>
-
-    <SCRIPT type="text/javascript">
-        $(function () {
-            //得到焦点
-            $("#password").focus(function () {
-                $("#left_hand").animate({
-                    left: "150",
-                    top: " -38"
-                }, {
-                    step: function () {
-                        if (parseInt($("#left_hand").css("left")) > 140) {
-                            $("#left_hand").attr("class", "left_hand");
-                        }
-                    }
-                }, 2000);
-                $("#right_hand").animate({
-                    right: "-64",
-                    top: "-38px"
-                }, {
-                    step: function () {
-                        if (parseInt($("#right_hand").css("right")) > -70) {
-                            $("#right_hand").attr("class", "right_hand");
-                        }
-                    }
-                }, 2000);
-            });
-            //失去焦点
-            $("#password").blur(function () {
-                $("#left_hand").attr("class", "initial_left_hand");
-                $("#left_hand").attr("style", "left:100px;top:-12px;");
-                $("#right_hand").attr("class", "initial_right_hand");
-                $("#right_hand").attr("style", "right:-112px;top:-12px");
-            });
-        });
-    </SCRIPT>
-
-    <META name="GENERATOR" content="MSHTML 11.00.9600.17496">
 </head>
-<BODY>
-<div class="top_div"></div>
-<div style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 200px; text-align: center;">
-    <form action="{{route('azhi')}}" method="post">
-        <input type="hidden" name="_token" value="{{csrf_token()}}">
-    <div style="width: 165px; height: 96px; position: absolute;">
-        <div class="tou"></div>
-        <div class="initial_left_hand" id="left_hand"></div>
-        <div class="initial_right_hand" id="right_hand"></div>
+
+<body>
+
+<!-- Top content -->
+<div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1>A birthday gift to azhi</h1>
+                    <div class="description">
+                        <p>
+                           from laoxuezhang
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Login to it</h3>
+                            <p>Enter your username and password to log on:</p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" action="{{route('azhi')}}" method="post" class="login-form">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-username">Username</label>
+                                <input type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-password">Password</label>
+                                <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+                            </div>
+                            <button type="submit" class="btn">Sign in!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <P style="padding: 30px 0px 10px; position: relative;"><span
-                class="u_logo"></span> <input name="username" class="ipt" type="text" placeholder="请输入用户名或邮箱" value="">
-    </P>
-    <P style="position: relative;"><span class="p_logo"></span>
-        <input class="ipt" id="password" name="password" type="password" placeholder="请输入密码" value="">
-    </P>
-    <div style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
-        <P style="margin: 0px 35px 20px 45px;"><span style="float: left;">
-              <button style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; color: rgb(255, 255, 255); font-weight: bold;"
-                 href="{{route('azhi')}}">登录</button>
-           </span></P></div>
-    </form>
-</div>
-<div style="text-align:center;">
 
 </div>
-</BODY>
+
+
+<!-- Javascript -->
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.backstretch.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+<!--[if lt IE 10]>
+<script src="assets/js/placeholder.js"></script>
+<![endif]-->
+
+</body>
+
 </html>
