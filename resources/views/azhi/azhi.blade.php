@@ -10,7 +10,7 @@
     </style>
     <link href="/css/default_dev.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="/js/jquery.min.js"></script>
-    {{--<script type="text/javascript" src="/js/garden_dev.js"></script>--}}
+    <script type="text/javascript" src="/js/garden_dev.js"></script>
     <script type="text/javascript" src="/js/functions_dev.js"></script>
 </head>
 
@@ -45,7 +45,7 @@
             <span class="space">感觉时间过得真快</span><br />
             <span class="space">大二暑假相识</span><br />
             <span class="space"/>如今转眼已两年半了<br />
-            <span class="space"/>一路有你这小逗比的陪伴<br />
+    {{--        <span class="space"/>一路有你这小逗比的陪伴<br />
             <span class="space"/>感觉真好<br />
             <span class="space"/>大学认识了你<br />
             <span class="space"/>感觉有点小幸运<br />
@@ -59,7 +59,7 @@
 				<span class="space"/>偶尔飘来的一阵雨<br />
 				<span class="space"/>感觉就要大雨滂沱了<br />
                 <span class="space"/>随之而来的一缕阳光<br />
-                <span class="space">感觉就像深圳的天气</span>
+                <span class="space">感觉就像深圳的天气</span><br />
                 <span class="space">一年四季都阳光明媚了</span><br />
                 <span class="space">还有本来不文艺的学长都变得文艺起来了</span><br />
                 <span class="space">与你相识的这两年</span><br />
@@ -67,7 +67,6 @@
                 <span class="space">偶尔一起去吃吃饭</span><br />
                 <span class="space">一起出去耍</span><br />
                 <span class="space">还有暑假一起学过的java</span><br />
-                <span class="space">还有暑假的早餐</span><br />
                 <span class="space">都如回忆一般涌来</span><br />
                 <span class="space">时间是让人猝不及防的东西</span><br />
                 <span class="space">晴时有风阴有时雨</span><br />
@@ -78,7 +77,7 @@
                 <span class="space">😂😂😂😂😂😂</span><br />
                 <span class="space">😂😂😂😂😂😂</span><br />
                 <span class="space">😂😂😂😂😂😂</span><br />
-				<span class="space"/>祝逗比小学妹生日快乐！！！<br />------与君初相识，犹如故人归。</span> <br />
+				<span class="space"/>祝逗比小学妹生日快乐！！！<br />------与君初相识，犹如故人归。</span> <br />--}}
             <br />
         </div>
         <div id="loveHeart">
