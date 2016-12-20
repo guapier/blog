@@ -72,12 +72,20 @@ class HomeController extends Controller
         return view('guestbook');
     }
 
-    public function azhi(){
-        return view('azhi');
+    public function azhi(Request $request){
+        $username=$request->get('username');
+        $password=$request->get('password');
+        if($username=="azhi"&&$password=="1122"){
+
+            return view('azhi.azhi');
+        }else{
+            return view('login');
+        }
     }
 
     public function login_login(){
         return view('login');
+
     }
 
 }

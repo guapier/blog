@@ -26,6 +26,8 @@ Route::get('/gallery', ['uses' => 'HomeController@gallery', 'as' => 'gallery']);
 Route::get('/api/gallery', ['uses' => 'HomeController@getData', 'as' => 'api.gallery']);
 Route::get('/music', ['uses' => 'HomeController@music', 'as' => 'music']);
 Route::get('/guestbook', ['uses' => 'HomeController@guestbook', 'as' => 'guestbook']);
+Route::post('/azhi', ['uses' => 'HomeController@azhi', 'as' => 'azhi']);
+Route::get('/azhi', ['uses' => 'HomeController@login_login', 'as' => 'login_login']);
 
 // Post
 Route::get('/blog', ['uses' => 'PostController@index', 'as' => 'post.index']);
@@ -113,5 +115,3 @@ Route::group(['prefix' => 'admin', ['middleware' => ['auth', 'admin']]], functio
  * must last
  */
 Route::get('/{name}', ['uses' => 'PageController@show', 'as' => 'page.show']);
-Route::post('/azhi', ['uses' => 'HomeController@azhi', 'as' => 'azhi']);
-Route::get('/zhi', ['uses' => 'HomeController@login_login', 'as' => 'login_login']);
