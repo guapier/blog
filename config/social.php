@@ -7,7 +7,7 @@ return [
  * Date: 2016/8/21
  * Time: 22:47
  */
-    'facebook' => [
+ /*   'facebook' => [
         'url'  => 'https://www.facebook.com/profile.php?id=100011357444248',
         'fa'   => 'fa fa-facebook fa-fw',
     ],
@@ -18,9 +18,9 @@ return [
     'weibo'    => [
         'url'  => 'http://weibo.com/u/2363498941',
         'fa'   => 'fa fa-weibo fa-fw',
-    ],
+    ],*/
     'github'  => [
-        'url' =>'https://github.com/lufficc',
+        'url' =>'https://github.com/guapier',
         'fa'   => 'fa fa-github fa-fw',
     ],
 
