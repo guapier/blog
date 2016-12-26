@@ -6,6 +6,7 @@ use App\Azhi;
 use App\Http\Repositories\ImageRepository;
 use App\Http\Repositories\PostRepository;
 use App\Post;
+use App\User;
 use Carbon\Carbon;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
@@ -84,7 +85,8 @@ class HomeController extends Controller
                 'ip'=>$ip,
                 'time'=>$time
         ]);
-        if($username=="azhi"&&$password=="1122"){
+        $user=User::where('email',$username)->first();
+        if($user->password==$password){
 
             return view('azhi.azhi');
         }else{
