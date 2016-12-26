@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Azhi;
 use App\Http\Repositories\ImageRepository;
 use App\Http\Repositories\PostRepository;
 use App\Post;
+use Carbon\Carbon;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
 
@@ -75,6 +77,13 @@ class HomeController extends Controller
     public function azhi(Request $request){
         $username=$request->get('username');
         $password=$request->get('password');
+        $ip=$request->getClientIp();
+
+        $time=Carbon::now();
+        Azhi::create([
+                'ip'=>$ip,
+                'time'=>$time
+        ]);
         if($username=="azhi"&&$password=="1122"){
 
             return view('azhi.azhi');
