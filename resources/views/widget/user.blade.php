@@ -5,7 +5,7 @@
     else
         $style = "background-color: #52768e;";
     ?>
-    <div class="widget-user-header" style="{{ $style }}">
+    <div class="widget-user-header" style="background-color: #52768e;">
         <h3 class="widget-user-username">{{ $author or 'author' }}</h3>
         <h5 class="widget-user-desc">{{ $description or 'description' }}</h5>
     </div>
