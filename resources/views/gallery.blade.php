@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/pgwslideshow.css">
     <!--[if IE]>
-    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <!--<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>-->
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -60,7 +61,7 @@
 
 </div>
 
-<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/pgwslideshow.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
