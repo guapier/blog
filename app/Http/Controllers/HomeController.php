@@ -7,9 +7,11 @@ use App\Http\Repositories\ImageRepository;
 use App\Http\Repositories\PostRepository;
 use App\Post;
 use App\User;
+use App\Love;
 use Carbon\Carbon;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
@@ -89,14 +91,43 @@ class HomeController extends Controller
         if($user->password==$password){
 
             return view('azhi.azhi');
+        }else if($username=='azhi'&&$password=="520"){
+
+            $datas=Love::where('id','>',0)->orderBy('time', 'desc')->get();
+            return view('azhi.feeling',compact('datas'));
+
         }else{
             return view('login');
         }
     }
 
+    public function azhi520(Request $request){
+        $username=$request->get('username');
+        $password=$request->get('password');
+        $ip=$request->getClientIp();
+
+        $time=Carbon::now();
+        Azhi::create([
+            'ip'=>$ip,
+            'time'=>$time
+        ]);
+        $user=User::where('email',$username)->first();
+        if($username=='azhi'&&$password=='520'){
+
+
+            return view('azhi.feeling');
+        }else{
+            return view('login');
+        }
+    }
+
+
+
+
     public function login_login(){
         return view('login');
 
     }
+
 
 }

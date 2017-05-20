@@ -28,6 +28,8 @@ Route::get('/music', ['uses' => 'HomeController@music', 'as' => 'music']);
 Route::get('/guestbook', ['uses' => 'HomeController@guestbook', 'as' => 'guestbook']);
 Route::post('/azhi', ['uses' => 'HomeController@azhi', 'as' => 'azhi']);
 Route::get('/azhi', ['uses' => 'HomeController@login_login', 'as' => 'login_login']);
+Route::get('/520', ['uses' => 'HomeController@login_login', 'as' => 'login_login']);
+Route::post('/520', ['uses' => 'HomeController@azhi520', 'as' => 'azhi520']);
 
 // Post
 Route::get('/blog', ['uses' => 'PostController@index', 'as' => 'post.index']);
